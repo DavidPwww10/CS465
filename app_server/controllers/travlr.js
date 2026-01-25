@@ -1,11 +1,17 @@
 // app_server/controllers/travlr.js
 
+// Load trip data from JSON (Module 3)
+const trips = require('../data/trips.json');
+
 const home = (req, res) => {
     res.render('index', { title: 'Travlr Getaways' });
 };
 
 const travel = (req, res) => {
-    res.render('travel', { title: 'Travel' });
+    res.render('travel', {
+        title: 'Travel',
+        trips
+    });
 };
 
 const rooms = (req, res) => {

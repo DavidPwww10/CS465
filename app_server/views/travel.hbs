@@ -1,2 +1,18 @@
 ﻿<h1>{{title}}</h1>
-<p>✅ Travel page is rendering from HBS using MVC routing.</p>
+<p>These trips are being loaded dynamically from <code>trips.json</code>.</p>
+
+<div>
+    {{#each trips}}
+    <div style="border: 1px solid #ccc; padding: 12px; margin: 12px 0;">
+        <h2>{{name}}</h2>
+
+        <p><strong>Duration:</strong> {{duration}}</p>
+        <p><strong>Price:</strong> ${{price}}</p>
+        <p><strong>Rating:</strong> {{rating}}/5</p>
+
+        <img src="/{{image}}" alt="{{name}}" style="max-width: 420px; display: block; margin: 10px 0;" />
+
+        <p>{{description}}</p>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Greece Getaway",
+    "duration": "7 days",
+    "price": 1899,
+    "rating": 4,
+    "image": "images/sea-sound.jpg",
+    "description": "A relaxing trip with beaches, history, and island tours."
+  },
+  {
+    "name": "Japan Explorer",
+    "duration": "10 days",
+    "price": 2499,
+    "rating": 5,
+    "image": "images/reef1.jpg",
+    "description": "A guided adventure through Tokyo, Kyoto, and cultural landmarks."
+  },
+  {
+    "name": "Caribbean Cruise",
+    "duration": "5 days",
+    "price": 1299,
+    "rating": 4,
+    "image": "images/reef2.jpg",
+    "description": "A quick cruise with island stops, snorkeling, and great food."
+  }
+]
