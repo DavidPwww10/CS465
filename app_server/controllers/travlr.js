@@ -1,17 +1,24 @@
 // app_server/controllers/travlr.js
 
-// Load trip data from JSON (Module 3)
-const trips = require('../data/trips.json');
+const mongoose = require('mongoose');
+const Trip = mongoose.model('Trip');
 
 const home = (req, res) => {
     res.render('index', { title: 'Travlr Getaways' });
 };
 
-const travel = (req, res) => {
-    res.render('travel', {
-        title: 'Travel',
-        trips
-    });
+const travel = async (req, res) => {
+    try {
+        const trips = await Trip.find().lean().exec();
+
+        res.render('travel', {
+            title: 'Travel',
+            trips
+        });
+    } catch (err) {
+        console.error('Error loading trips from database:', err);
+        res.status(500).send('Error loading trips from database');
+    }
 };
 
 const rooms = (req, res) => {
