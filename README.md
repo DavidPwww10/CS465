@@ -106,4 +106,4 @@ Since I’m pursuing a career in IT and networking, this project also helped me 
 2. Start the Angular admin SPA
 3. Use Postman (optional) to test API endpoints and login authentication
 
-*(Exact commands depend on your project folder structure and environment setup.)*
+
